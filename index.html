@@ -43,6 +43,12 @@
     </header>
     <!-- #end zagolovok -->
     <main>
+        <div class="box">
+            <input class="btn-toggle" type="checkbox" name="" id="btn" /> 
+            <label class="btn" for="btn">
+                <span class="btn-icon"></span>
+            </label>
+        </div>
         <!--#Header-->
         <section class="hero-section">
             <div class="container">
@@ -391,11 +397,68 @@
                 </li>
             </ul>
         </div>
-        </div>
+    <div class="subscribe">
+        <p class="subscribe-title">Subscribe</p>
+        <form class="subscribe-form">
+          <label>
+            <input class="subscribe-input" type="email" placeholder="E-mail">
+            
+          </label>
+        </form>
+    </div>
+      </div>
+
     </footer>
+<!--#end footter-->
+<div class="backdroup is-open">
+<div class="modal">
+    <button type="button" class="sent-button">
+        <svg class="svg-sent-button" width="8" height="8">
+            <use href="./images/icons.svg#icon-ixs"></use>
+        </svg>
+    </button>
+    <p class="modal-text">Leave your contacts and we will call you back</p>
+    
+    <form class="contac-form">
+        <div class="form-contact-list">
+    <label class="form-label" for="user-name">Name</label>
+        <div class="position-icon">
+    <input id="user-name" class="form-input" type="text" name="user-name" required />
+    <svg class="svg-sent" width="18" heigth="24" aria-hidden="true">
+        <use href="./images/icons.svg#icon-person-black"></use>
+    </svg>
+    </div>
+        </div>
+    
+        <div>
+        <label class="form-label" for="user-phone">Phone</label>
+        </div>
+        <div class="position-icon">
+    <input id="contact-tel" class="form-input" type="tel" name="contact-tel" required />
+    <svg class="svg-sent" width="18" heigth="24">
+        <use href="./images/icons.svg#icon-tel"></use>
+    </svg>
+    </div>
+    
+    <div>
+    <label class="form-label" for="user-email">Email</label>
+    </div>
+    <div class="position-icon">
+    <input id="user-email" class="form-input" type="email" name="email-address" required />
+    <svg class="svg-sent" width="18" heigth="24">
+        <use href="./images/icons.svg#icon-convert"></use>
+    </svg>
+    </div>
 
-    <!--#end footter-->
+    <div class="label-textaria">
+    <label class="form-label" for="user-comment">Comment</label>
+    <textarea id="user-comment" class="user-comment-text" name="feedback" placeholder="Text input"></textarea>
+    </div>
 
+<button type="button" class="main-button">Send</button>
+</form>
+</div>
+</div>
 </body>
 
 </html>
