@@ -151,10 +151,6 @@ box-shadow:
 }
 /*<-- #end region zagolovok -->*/
 
-.btn-icon::before {
-
-}
-
 /*<--#Header-->*/
 .hero-section {
     width: 100%;
@@ -472,7 +468,7 @@ box-shadow:
 }
 
 .social-media {
-    margin-left: auto;
+    margin-right: auto;
 }
 
 .media-text {
@@ -517,6 +513,11 @@ box-shadow:
 .social-icon {
     fill: #f4f4fd;
 } 
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
 .subscribe-title {
     font-weight: 500;
     font-size: 16px;
@@ -527,7 +528,7 @@ box-shadow:
 }
 .subscribe-form {
     display: flex;
-    gap 24px
+    gap: 24px;
 }
 .subscribe-input {
     width: 264px;
@@ -541,6 +542,32 @@ box-shadow:
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     color: #ffffff;
+}
+.subscribe-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4D5AE5;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffff;
+    min-width: 165px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+.subscribe-icon {
+    fill: #ffff;
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+    background-color: #31D0AA;
 }
 /*modal-windous*/
 .backdroup {
@@ -560,7 +587,7 @@ box-shadow:
 .backdroup.is-open {
     opacity: 1;
     visibility: visible;
-    pointer-events: none;
+    pointer-events: auto;
     
 }
 .modal {
@@ -607,13 +634,14 @@ input {
 .sent-button:focus {
     border: none;
     background-color: #404bbf;
+    
 }
 .svg-sent-button {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.svg-sent-button:hover,
-.svg-sent-button:focus {
-    fill: #ffffff
+.sent-button:hover, .svg-sent-button,
+.sent-button:focus, .svg-sent-button {
+    fill: #ffffff;
 }
 .modal-text {
     font-weight: 500;
@@ -656,6 +684,9 @@ input {
 .position-icon {
     position: relative;
 }
+.form-input:focus~.svg-sent {
+    stroke: #4D5AE5;
+}
 .label-textaria {
     margin-bottom: 16px
 }
@@ -673,8 +704,31 @@ input {
     outline: transparent;
     resize: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+}
+.custom-checkbobox {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    fill: transparent;
+}
+.policy-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
 }
 
+.accent-label {
+    line-height: 1.33;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #4d5ae5;
+}
 
 /*end-modal-windous*/
