@@ -12,7 +12,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Roboto:wght@700&display=swap"
         rel="stylesheet">
     
         <link rel="stylesheet" href="./css/styles.css" />
@@ -394,8 +394,8 @@
     <div class="subscribe">
         <p class="subscribe-title">Subscribe</p>
         <form class="subscribe-form">
-          <label class="subscribe-form-label">
-            <input class="subscribe-input" name="email" type="email" placeholder="E-mail">
+          <label class="subscribe-form-label" for="email">
+            <input id="email" class="subscribe-input" name="e-mail" type="email" placeholder="E-mail">
           </label>
         <button type="submit" class="subscribe-btn">Subscribe
                 <svg class="icon subscribe-icon" width="24" height="24">
@@ -407,7 +407,7 @@
 
     </footer>
 <!--#end footter-->
-<div class="backdroup is-open">
+<div class="backdrop is-open">
 <div class="modal">
     <button type="button" class="sent-button">
         <svg class="svg-sent-button" width="8" height="8">
@@ -429,22 +429,24 @@
     
         <div class="form-contact-list">
             <label class="form-label" for="user-phone">Phone</label>
-        </div>
+        
         <div class="position-icon">
             <input id="contact-tel" class="form-input" type="tel" name="contact-tel" required />
             <svg class="svg-sent" width="18" heigth="24">
                 <use href="./images/icons.svg#icon-tel"></use>
             </svg>
-        </div>    
+        </div>
+        </div>
     
         <div class="form-contact-list">
             <label class="form-label" for="user-email">Email</label>
-        </div>
+        
         <div class="position-icon">
             <input id="user-email" class="form-input" type="email" name="email-address" required />
                 <svg class="svg-sent" width="18" heigth="24">
                     <use href="./images/icons.svg#icon-convert"></use>
                 </svg>
+        </div>
         </div>
 
         <div class="form-contact-list">
@@ -452,17 +454,20 @@
                 <textarea id="user-comment" class="user-comment-text" name="feedback" placeholder="Text input"></textarea>
         </div>
         <div class="modal-form-checkbox">
-            <input class="checkbox-input"
-                   type="checkbox" id="policy" name="policy" value="true">
-            <label class="policy-label" for="policy">
+            <input class="checkbox-input visually-hidden"
+                   type="checkbox" id="user-privacy" name="user-privacy" value="true">
+            <div>
+                   <label class="policy-label" for="user-privacy">
                 <span class="custom-checkbobox">
                     <svg class="checkbox-icon" width="10" heigth="8">
                         <use href="./images/icons.svg#icon-Vector"></use>
                     </svg>
                 </span>
+                </div>
+                <div>
                 I accept the terms and conditions of the 
                 <a href="#" class="accent-label">Privacy Policy</a></label>
-        <div>
+        </div>
 
         </div>
 

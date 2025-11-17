@@ -531,9 +531,10 @@ box-shadow:
     gap: 24px;
 }
 .subscribe-input {
+    font-weight: 500;
     width: 264px;
     height: 40px;
-    border: 1px solid #ffffff;
+    border: 1px solid #fff;
     background-color: transparent;
     font-size: 12px;
     line-height: 2;
@@ -541,14 +542,14 @@ box-shadow:
     padding-left: 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    color: #ffffff;
+    color: #fff;
 }
 .subscribe-btn {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Roboto", sans-serif;
     background-color: #4D5AE5;
-    font-family: "Roboto",sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
@@ -570,7 +571,7 @@ box-shadow:
     background-color: #31D0AA;
 }
 /*modal-windous*/
-.backdroup {
+.backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -584,7 +585,7 @@ box-shadow:
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
                 visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdroup.is-open {
+.backdrop.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -603,6 +604,9 @@ box-shadow:
         background: #fcfcfc;
         transform: translate(-50%,-50%);
         padding: 72px 24px 24px 24px;
+}
+.backdrop:not(.is-open) .modal {
+    transform: translate(-50%, -100%);
 }
 label {
     display: flex;
@@ -705,6 +709,51 @@ input {
     resize: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.user-comment-text:focus {
+    border-color: #4D5AE5;
+}
+.modal-form-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.checkbox-input {
+
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.policy-label:hover .custom-checkbobox {
+    border-color: #6C63FF;
+    /* слабкий фіолетовий підсвіт */
+}
+
+.checkbox-icon {
+    width: 10px;
+    height: 8px;
+    opacity: 0;
+    transform: scale(0.6);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    fill: #FFF;
+}
+/* Активний стан */
+.checkbox-input:checked+label .custom-checkbobox {
+    background-color: #6C63FF;
+    /* синьо-фіолетовий як кнопка Send */
+    border-color: #6C63FF;
+}
+.policy-label {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    cursor: pointer;
+    line-height: 1;
+}
 .custom-checkbobox {
     display: inline-flex;
     justify-content: center;
@@ -713,15 +762,9 @@ input {
     width: 16px;
     height: 16px;
     border-radius: 2px;
+    cursor: pointer;
     border: 1px solid rgba(46, 47, 66, 0.4);
     fill: transparent;
-}
-.policy-label {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color: #8e8f99;
 }
 
 .accent-label {
